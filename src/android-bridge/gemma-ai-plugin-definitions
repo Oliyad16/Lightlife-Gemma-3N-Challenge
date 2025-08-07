@@ -1,0 +1,344 @@
+// Capacitor plugin definitions for Gemma AI integration
+
+export interface GemmaAIPluginDefinitions {
+  /**
+   * Initialize the Gemma AI model with specified configuration
+   */
+  initialize(options: {
+    modelPath: string;
+    configPath: string;
+  }): Promise<{ success: boolean; message: string }>;
+
+  /**
+   * Generate text completion using the Gemma model
+   */
+  generateText(options: {
+    prompt: string;
+    maxTokens?: number;
+    temperature?: number;
+    topP?: number;
+    repetitionPenalty?: number;
+  }): Promise<{ 
+    text: string; 
+    executionTime: number;
+    tokensGenerated: number;
+  }>;
+
+  /**
+   * Chat conversation with the Gemma model
+   */
+  chat(options: {
+    messages: Array<{
+      role: 'system' | 'user' | 'assistant';
+      content: string;
+    }>;
+    maxTokens?: number;
+    temperature?: number;
+    topP?: number;
+  }): Promise<{ 
+    response: string; 
+    executionTime: number;
+    tokensGenerated: number;
+  }>;
+
+  /**
+   * Get information about the loaded model
+   */
+  getModelInfo(): Promise<{
+    modelName: string;
+    version: string;
+    isReady: boolean;
+    memoryUsage: number;
+    parametersCount: string;
+  }>;
+
+  /**
+   * Check hardware acceleration capabilities
+   */
+  checkHardwareAcceleration(): Promise<{
+    available: boolean;
+    type: string; // 'gpu', 'npu', 'cpu'
+    deviceInfo: string;
+  }>;
+
+  /**
+   * Get performance metrics
+   */
+  getPerformanceMetrics(): Promise<{
+    averageInferenceTime: number;
+    totalInferences: number;
+    memoryPeak: number;
+    batteryImpact: string;
+  }>;
+
+  /**
+   * Cleanup and destroy the AI session
+   */
+  destroySession(): Promise<{ success: boolean }>;
+
+  /**
+   * Check if model files are available
+   */
+  checkModelFiles(): Promise<{
+    modelExists: boolean;
+    configExists: boolean;
+    modelSize: number;
+    lastModified: string;
+  }>;
+
+  /**
+   * Download model files (if needed)
+   */
+  downloadModel(options: {
+    modelUrl: string;
+    onProgress?: (progress: number) => void;
+  }): Promise<{ 
+    success: boolean; 
+    filePath: string;
+    fileSize: number;
+  }>;
+
+  /**
+   * Validate model integrity
+   */
+  validateModel(): Promise<{
+    isValid: boolean;
+    checksum: string;
+    issues: string[];
+  }>;
+
+  /**
+   * Configure inference settings
+   */
+  configureInference(options: {
+    useGPU?: boolean;
+    threadsCount?: number;
+    memoryLimit?: number;
+    precisionMode?: 'fp16' | 'fp32' | 'int8';
+  }): Promise<{ success: boolean; appliedSettings: Record<string, unknown> }>;
+
+  /**
+   * Get system information
+   */
+  getSystemInfo(): Promise<{
+    androidVersion: string;
+    deviceModel: string;
+    availableMemory: number;
+    cpuCores: number;
+    hasGPU: boolean;
+    supportedFeatures: string[];
+  }>;
+}
+
+// Event listener definitions
+export interface GemmaAIEventListeners {
+  /**
+   * Model loading progress
+   */
+  onModelLoadProgress: (data: { 
+    progress: number; 
+    stage: string; 
+    message: string 
+  }) => void;
+
+  /**
+   * Inference start
+   */
+  onInferenceStart: (data: { 
+    timestamp: number; 
+    requestId: string 
+  }) => void;
+
+  /**
+   * Inference complete
+   */
+  onInferenceComplete: (data: { 
+    timestamp: number; 
+    requestId: string; 
+    executionTime: number;
+    tokensGenerated: number;
+  }) => void;
+
+  /**
+   * Memory warning
+   */
+  onMemoryWarning: (data: { 
+    currentUsage: number; 
+    threshold: number; 
+    recommendation: string 
+  }) => void;
+
+  /**
+   * Error occurred
+   */
+  onError: (data: { 
+    error: string; 
+    code: number; 
+    details: string 
+  }) => void;
+
+  /**
+   * Model ready
+   */
+  onModelReady: (data: { 
+    modelName: string; 
+    loadTime: number;
+    memoryUsage: number;
+  }) => void;
+}
+
+// Configuration interfaces
+export interface GemmaModelConfig {
+  modelPath: string;
+  configPath: string;
+  vocabPath?: string;
+  tokenizerPath?: string;
+  useQuantization: boolean;
+  quantizationType: 'dynamic' | 'static';
+  maxSequenceLength: number;
+  batchSize: number;
+  numThreads: number;
+  useGPU: boolean;
+  gpuDeviceId?: number;
+  memoryLimit: number; // in MB
+  cacheSize: number; // in MB
+  precisionMode: 'fp16' | 'fp32' | 'int8';
+  enableProfiling: boolean;
+}
+
+export interface InferenceOptions {
+  prompt: string;
+  maxTokens: number;
+  temperature: number;
+  topP: number;
+  topK: number;
+  repetitionPenalty: number;
+  stopSequences: string[];
+  seed?: number;
+  streamResponse: boolean;
+}
+
+export interface ChatOptions {
+  messages: Array<{
+    role: 'system' | 'user' | 'assistant';
+    content: string;
+    timestamp?: number;
+  }>;
+  conversationId?: string;
+  maxTokens: number;
+  temperature: number;
+  topP: number;
+  systemPrompt?: string;
+  contextWindow: number;
+  streamResponse: boolean;
+}
+
+// Plugin result interfaces
+export interface ModelInfo {
+  modelName: string;
+  version: string;
+  architecture: string;
+  parametersCount: number;
+  quantizationType: string;
+  modelSize: number;
+  isReady: boolean;
+  loadTime: number;
+  memoryUsage: {
+    current: number;
+    peak: number;
+    limit: number;
+  };
+  supportedFeatures: string[];
+}
+
+export interface InferenceResult {
+  text: string;
+  confidence: number;
+  executionTime: number;
+  tokensGenerated: number;
+  promptTokens: number;
+  completionTokens: number;
+  finishReason: 'length' | 'stop' | 'temperature';
+  metadata: {
+    requestId: string;
+    timestamp: number;
+    modelVersion: string;
+  };
+}
+
+export interface ChatResult {
+  response: string;
+  conversationId: string;
+  messageId: string;
+  executionTime: number;
+  tokensGenerated: number;
+  contextUsed: number;
+  confidence: number;
+  finishReason: 'length' | 'stop' | 'temperature';
+  metadata: {
+    requestId: string;
+    timestamp: number;
+    turnCount: number;
+  };
+}
+
+// Error codes and types
+export enum GemmaErrorCodes {
+  MODEL_NOT_LOADED = 1001,
+  INFERENCE_FAILED = 1002,
+  MEMORY_EXCEEDED = 1003,
+  INVALID_INPUT = 1004,
+  GPU_ERROR = 1005,
+  FILE_NOT_FOUND = 1006,
+  PERMISSION_DENIED = 1007,
+  NETWORK_ERROR = 1008,
+  TIMEOUT_ERROR = 1009,
+  UNKNOWN_ERROR = 9999
+}
+
+export interface GemmaError {
+  code: GemmaErrorCodes;
+  message: string;
+  details?: string;
+  timestamp: number;
+  requestId?: string;
+  recoverable: boolean;
+  suggestions: string[];
+}
+
+// Utility types
+export type ModelLoadingStage = 
+  | 'initializing'
+  | 'loading_weights'
+  | 'optimizing'
+  | 'validating'
+  | 'ready'
+  | 'error';
+
+export type InferenceStatus = 
+  | 'idle'
+  | 'processing'
+  | 'streaming'
+  | 'completed'
+  | 'error';
+
+export type PlatformCapability = 
+  | 'gpu_acceleration'
+  | 'npu_acceleration'
+  | 'quantized_models'
+  | 'streaming_inference'
+  | 'batch_processing'
+  | 'model_caching';
+
+// Native bridge configuration
+export interface NativeBridgeConfig {
+  enableLogging: boolean;
+  logLevel: 'debug' | 'info' | 'warn' | 'error';
+  performanceMetrics: boolean;
+  memoryOptimization: boolean;
+  backgroundProcessing: boolean;
+  crashReporting: boolean;
+  analytics: boolean;
+}
+
+export default GemmaAIPluginDefinitions;
