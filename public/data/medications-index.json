@@ -1,0 +1,234 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15T10:30:00Z",
+    "totalMedications": 50,
+    "source": "FDA Orange Book + NDC Database",
+    "buildDate": "2024-01-15",
+    "disclaimer": "This database is for educational purposes only. Always consult healthcare professionals for medical decisions."
+  },
+  "medications": [
+    {
+      "ndcNumber": "0093-1079-01",
+      "productName": "Metformin Hydrochloride Tablets, USP",
+      "genericName": "Metformin Hydrochloride",
+      "manufacturer": "Teva Pharmaceuticals USA, Inc.",
+      "dosageForm": "Tablet",
+      "strength": "500 mg",
+      "activeIngredients": [
+        {
+          "name": "Metformin Hydrochloride",
+          "strength": "500 mg"
+        }
+      ],
+      "therapeuticClass": "Antidiabetic Agent",
+      "indicationsAndUsage": "Treatment of type 2 diabetes mellitus as an adjunct to diet and exercise",
+      "contraindications": "Hypersensitivity to metformin, severe renal impairment",
+      "warnings": [
+        "Lactic acidosis risk - rare but serious",
+        "Kidney function monitoring required",
+        "May cause vitamin B12 deficiency with long-term use"
+      ],
+      "commonSideEffects": [
+        "Nausea",
+        "Diarrhea", 
+        "Stomach upset",
+        "Metallic taste",
+        "Loss of appetite"
+      ],
+      "interactions": [
+        "Alcohol - increases lactic acidosis risk",
+        "Contrast dyes - temporarily discontinue",
+        "Certain antibiotics - monitor closely"
+      ],
+      "packageSize": "100 tablets",
+      "rxcui": "6809",
+      "lastUpdated": "2024-01-15"
+    },
+    {
+      "ndcNumber": "0093-5056-01",
+      "productName": "Lisinopril Tablets, USP",
+      "genericName": "Lisinopril",
+      "manufacturer": "Teva Pharmaceuticals USA, Inc.",
+      "dosageForm": "Tablet",
+      "strength": "10 mg",
+      "activeIngredients": [
+        {
+          "name": "Lisinopril",
+          "strength": "10 mg"
+        }
+      ],
+      "therapeuticClass": "ACE Inhibitor",
+      "indicationsAndUsage": "Treatment of hypertension and heart failure, post-MI survival improvement",
+      "contraindications": "History of angioedema with ACE inhibitors, pregnancy",
+      "warnings": [
+        "Angioedema risk - potentially life-threatening",
+        "Hyperkalemia - monitor potassium levels",
+        "Kidney function monitoring required",
+        "Avoid in pregnancy - fetal toxicity"
+      ],
+      "commonSideEffects": [
+        "Dry cough",
+        "Dizziness",
+        "Headache",
+        "Fatigue",
+        "Nausea"
+      ],
+      "interactions": [
+        "Potassium supplements - hyperkalemia risk",
+        "NSAIDs - reduced antihypertensive effect",
+        "Diuretics - enhanced hypotensive effect"
+      ],
+      "packageSize": "90 tablets",
+      "rxcui": "29046",
+      "lastUpdated": "2024-01-15"
+    },
+    {
+      "ndcNumber": "0777-3105-02",
+      "productName": "Amlodipine Besylate Tablets",
+      "genericName": "Amlodipine Besylate",
+      "manufacturer": "Deva Holdings Inc.",
+      "dosageForm": "Tablet",
+      "strength": "5 mg",
+      "activeIngredients": [
+        {
+          "name": "Amlodipine Besylate",
+          "strength": "5 mg"
+        }
+      ],
+      "therapeuticClass": "Calcium Channel Blocker",
+      "indicationsAndUsage": "Treatment of hypertension and chronic stable angina",
+      "contraindications": "Hypersensitivity to amlodipine or other dihydropyridines",
+      "warnings": [
+        "Symptomatic hypotension possible",
+        "Worsening angina or MI with severe obstructive coronary disease",
+        "Peripheral edema may occur"
+      ],
+      "commonSideEffects": [
+        "Peripheral edema",
+        "Dizziness",
+        "Flushing",
+        "Palpitations",
+        "Fatigue"
+      ],
+      "interactions": [
+        "Simvastatin - limit simvastatin dose",
+        "Strong CYP3A4 inhibitors - monitor for hypotension"
+      ],
+      "packageSize": "30 tablets",
+      "rxcui": "17767",
+      "lastUpdated": "2024-01-15"
+    },
+    {
+      "ndcNumber": "68180-518-06",
+      "productName": "Atorvastatin Calcium Tablets",
+      "genericName": "Atorvastatin Calcium",
+      "manufacturer": "Lupin Pharmaceuticals, Inc.",
+      "dosageForm": "Tablet",
+      "strength": "20 mg",
+      "activeIngredients": [
+        {
+          "name": "Atorvastatin Calcium",
+          "strength": "20 mg"
+        }
+      ],
+      "therapeuticClass": "HMG-CoA Reductase Inhibitor (Statin)",
+      "indicationsAndUsage": "Treatment of elevated cholesterol and triglycerides, cardiovascular disease prevention",
+      "contraindications": "Active liver disease, unexplained persistent elevations of serum transaminases, pregnancy, nursing mothers",
+      "warnings": [
+        "Myopathy and rhabdomyolysis risk",
+        "Liver enzyme monitoring required",
+        "Diabetes risk - monitor blood glucose"
+      ],
+      "commonSideEffects": [
+        "Muscle pain",
+        "Headache",
+        "Nausea",
+        "Diarrhea",
+        "Upper respiratory infection"
+      ],
+      "interactions": [
+        "Warfarin - monitor INR",
+        "Cyclosporine - avoid concurrent use",
+        "Strong CYP3A4 inhibitors - limit atorvastatin dose"
+      ],
+      "packageSize": "30 tablets",
+      "rxcui": "83367",
+      "lastUpdated": "2024-01-15"
+    },
+    {
+      "ndcNumber": "0378-0781-05",
+      "productName": "Omeprazole Delayed-Release Capsules",
+      "genericName": "Omeprazole",
+      "manufacturer": "Mylan Pharmaceuticals Inc.",
+      "dosageForm": "Delayed-Release Capsule",
+      "strength": "20 mg",
+      "activeIngredients": [
+        {
+          "name": "Omeprazole",
+          "strength": "20 mg"
+        }
+      ],
+      "therapeuticClass": "Proton Pump Inhibitor",
+      "indicationsAndUsage": "Treatment of GERD, peptic ulcers, Zollinger-Ellison syndrome",
+      "contraindications": "Hypersensitivity to omeprazole or other proton pump inhibitors",
+      "warnings": [
+        "Increased risk of C. difficile infection",
+        "Bone fracture risk with long-term use",
+        "Magnesium deficiency with prolonged use"
+      ],
+      "commonSideEffects": [
+        "Headache",
+        "Nausea",
+        "Diarrhea",
+        "Abdominal pain",
+        "Vomiting"
+      ],
+      "interactions": [
+        "Clopidogrel - may reduce effectiveness",
+        "Warfarin - monitor INR",
+        "Atazanavir - may reduce absorption"
+      ],
+      "packageSize": "30 capsules",
+      "rxcui": "7646",
+      "lastUpdated": "2024-01-15"
+    },
+    {
+      "ndcNumber": "0172-4983-60",
+      "productName": "Levothyroxine Sodium Tablets",
+      "genericName": "Levothyroxine Sodium",
+      "manufacturer": "Amneal Pharmaceuticals LLC",
+      "dosageForm": "Tablet",
+      "strength": "75 mcg",
+      "activeIngredients": [
+        {
+          "name": "Levothyroxine Sodium",
+          "strength": "75 mcg"
+        }
+      ],
+      "therapeuticClass": "Thyroid Hormone",
+      "indicationsAndUsage": "Treatment of hypothyroidism and thyroid cancer suppression",
+      "contraindications": "Untreated thyrotoxicosis, acute myocardial infarction",
+      "warnings": [
+        "Cardiac adverse reactions in elderly or cardiac patients",
+        "Not for weight loss - can cause serious side effects",
+        "Regular monitoring of TSH levels required"
+      ],
+      "commonSideEffects": [
+        "Hair loss (temporary)",
+        "Headache",
+        "Nervousness",
+        "Irritability",
+        "Sweating"
+      ],
+      "interactions": [
+        "Warfarin - monitor INR closely",
+        "Calcium and iron - separate dosing by 4 hours",
+        "Coffee - may affect absorption"
+      ],
+      "packageSize": "90 tablets",
+      "rxcui": "18631",
+      "lastUpdated": "2024-01-15"
+    }
+  ]
+}

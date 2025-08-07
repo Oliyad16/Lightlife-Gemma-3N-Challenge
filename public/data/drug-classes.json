@@ -1,0 +1,309 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15T10:30:00Z",
+    "totalClasses": 15,
+    "source": "FDA Therapeutic Classification System",
+    "description": "Therapeutic drug classifications for medication categorization"
+  },
+  "classes": [
+    {
+      "code": "ANTIDIAB",
+      "name": "Antidiabetic Agents",
+      "description": "Medications used to treat diabetes mellitus by controlling blood glucose levels",
+      "subclasses": [
+        "Biguanides",
+        "Sulfonylureas", 
+        "DPP-4 Inhibitors",
+        "GLP-1 Agonists",
+        "Insulin"
+      ],
+      "commonSideEffects": [
+        "Hypoglycemia",
+        "Gastrointestinal upset",
+        "Weight changes"
+      ],
+      "monitoringRequired": [
+        "Blood glucose levels",
+        "HbA1c",
+        "Kidney function",
+        "Liver function"
+      ],
+      "medications": [
+        "Metformin",
+        "Glipizide", 
+        "Insulin",
+        "Sitagliptin",
+        "Liraglutide"
+      ],
+      "lifestyle": [
+        "Diet modification",
+        "Regular exercise",
+        "Weight management",
+        "Blood sugar monitoring"
+      ]
+    },
+    {
+      "code": "ACEI",
+      "name": "ACE Inhibitors",
+      "description": "Angiotensin-converting enzyme inhibitors used primarily for hypertension and heart failure",
+      "mechanism": "Block conversion of angiotensin I to angiotensin II",
+      "commonSideEffects": [
+        "Dry cough",
+        "Hyperkalemia",
+        "Angioedema (rare)",
+        "Hypotension"
+      ],
+      "contraindications": [
+        "History of angioedema",
+        "Pregnancy",
+        "Bilateral renal artery stenosis"
+      ],
+      "monitoringRequired": [
+        "Blood pressure",
+        "Potassium levels",
+        "Kidney function",
+        "Cough development"
+      ],
+      "medications": [
+        "Lisinopril",
+        "Enalapril",
+        "Captopril",
+        "Benazepril",
+        "Ramipril"
+      ],
+      "lifestyle": [
+        "Low sodium diet",
+        "Regular exercise",
+        "Weight management",
+        "Limit alcohol"
+      ]
+    },
+    {
+      "code": "CCB",
+      "name": "Calcium Channel Blockers",
+      "description": "Block calcium channels in heart and blood vessels to reduce blood pressure and treat angina",
+      "types": [
+        "Dihydropyridines (Amlodipine)",
+        "Non-dihydropyridines (Verapamil, Diltiazem)"
+      ],
+      "commonSideEffects": [
+        "Peripheral edema",
+        "Flushing",
+        "Headache",
+        "Dizziness"
+      ],
+      "monitoringRequired": [
+        "Blood pressure",
+        "Heart rate",
+        "Ankle swelling",
+        "Liver function"
+      ],
+      "medications": [
+        "Amlodipine",
+        "Nifedipine",
+        "Verapamil",
+        "Diltiazem",
+        "Felodipine"
+      ],
+      "lifestyle": [
+        "Regular blood pressure monitoring",
+        "Reduce sodium intake",
+        "Maintain healthy weight"
+      ]
+    },
+    {
+      "code": "STATIN",
+      "name": "HMG-CoA Reductase Inhibitors (Statins)",
+      "description": "Lower cholesterol by inhibiting cholesterol synthesis in the liver",
+      "mechanism": "Inhibit HMG-CoA reductase enzyme",
+      "commonSideEffects": [
+        "Muscle pain",
+        "Elevated liver enzymes",
+        "Headache",
+        "Digestive issues"
+      ],
+      "seriousRisks": [
+        "Rhabdomyolysis (rare)",
+        "Liver damage (rare)",
+        "Diabetes risk (slight increase)"
+      ],
+      "monitoringRequired": [
+        "Lipid panel",
+        "Liver function tests",
+        "Muscle symptoms",
+        "Blood glucose"
+      ],
+      "medications": [
+        "Atorvastatin",
+        "Simvastatin",
+        "Rosuvastatin",
+        "Pravastatin",
+        "Lovastatin"
+      ],
+      "lifestyle": [
+        "Heart-healthy diet",
+        "Regular exercise",
+        "Weight management",
+        "Smoking cessation"
+      ]
+    },
+    {
+      "code": "PPI",
+      "name": "Proton Pump Inhibitors",
+      "description": "Reduce stomach acid production for treatment of GERD and peptic ulcers",
+      "mechanism": "Irreversibly bind to hydrogen-potassium ATPase pump",
+      "commonSideEffects": [
+        "Headache",
+        "Nausea",
+        "Diarrhea",
+        "Abdominal pain"
+      ],
+      "longTermRisks": [
+        "Bone fracture risk",
+        "B12 deficiency",
+        "Magnesium deficiency",
+        "C. difficile infection"
+      ],
+      "monitoringRequired": [
+        "Symptom improvement",
+        "Magnesium levels (long-term)",
+        "B12 levels (long-term)"
+      ],
+      "medications": [
+        "Omeprazole",
+        "Esomeprazole",
+        "Lansoprazole",
+        "Pantoprazole",
+        "Rabeprazole"
+      ],
+      "lifestyle": [
+        "Avoid trigger foods",
+        "Eat smaller meals",
+        "Avoid lying down after eating",
+        "Weight management"
+      ]
+    },
+    {
+      "code": "THYROID",
+      "name": "Thyroid Hormones",
+      "description": "Replace or supplement thyroid hormone in hypothyroidism",
+      "mechanism": "Provide synthetic thyroid hormone (T4)",
+      "commonSideEffects": [
+        "Hair loss (temporary)",
+        "Headache",
+        "Nervousness",
+        "Sleep problems"
+      ],
+      "overdoseSymptoms": [
+        "Rapid heartbeat",
+        "Sweating",
+        "Tremors",
+        "Anxiety"
+      ],
+      "monitoringRequired": [
+        "TSH levels",
+        "Free T4 levels",
+        "Heart rate",
+        "Symptom assessment"
+      ],
+      "medications": [
+        "Levothyroxine",
+        "Liothyronine",
+        "Thyroid extract",
+        "Liotrix"
+      ],
+      "lifestyle": [
+        "Take on empty stomach",
+        "Consistent timing",
+        "Avoid certain foods/supplements near dose time",
+        "Regular follow-up"
+      ]
+    },
+    {
+      "code": "DIURETIC",
+      "name": "Diuretics",
+      "description": "Increase urine production to reduce fluid retention and blood pressure",
+      "types": [
+        "Thiazide/Thiazide-like",
+        "Loop diuretics",
+        "Potassium-sparing"
+      ],
+      "commonSideEffects": [
+        "Electrolyte imbalances",
+        "Dehydration",
+        "Dizziness",
+        "Increased urination"
+      ],
+      "monitoringRequired": [
+        "Electrolyte levels",
+        "Kidney function",
+        "Blood pressure",
+        "Fluid status"
+      ],
+      "medications": [
+        "Hydrochlorothiazide",
+        "Furosemide",
+        "Spironolactone",
+        "Chlorthalidone"
+      ]
+    },
+    {
+      "code": "BETA_BLOCKER",
+      "name": "Beta-Adrenergic Blockers",
+      "description": "Block beta receptors to reduce heart rate and blood pressure",
+      "commonSideEffects": [
+        "Fatigue",
+        "Cold hands/feet",
+        "Depression",
+        "Reduced exercise tolerance"
+      ],
+      "contraindications": [
+        "Severe asthma",
+        "Heart block",
+        "Severe bradycardia"
+      ],
+      "medications": [
+        "Metoprolol",
+        "Atenolol",
+        "Propranolol",
+        "Carvedilol"
+      ]
+    }
+  ],
+  "interactions": {
+    "commonInteractions": [
+      {
+        "classes": ["ACEI", "DIURETIC"],
+        "interaction": "Enhanced hypotensive effect",
+        "severity": "moderate",
+        "management": "Monitor blood pressure closely"
+      },
+      {
+        "classes": ["STATIN", "BETA_BLOCKER"],
+        "interaction": "Generally safe combination",
+        "severity": "low",
+        "management": "Routine monitoring"
+      },
+      {
+        "classes": ["PPI", "ANTIDIAB"],
+        "interaction": "May affect metformin absorption",
+        "severity": "low",
+        "management": "Separate dosing if possible"
+      }
+    ]
+  },
+  "elderlyConsiderations": {
+    "generalPrinciples": [
+      "Start low, go slow with dosing",
+      "Monitor for increased side effects",
+      "Consider drug interactions",
+      "Simplify regimens when possible"
+    ],
+    "highriskClasses": [
+      "DIURETIC - Falls risk due to hypotension",
+      "BETA_BLOCKER - Masking hypoglycemia symptoms",
+      "PPI - Long-term use risks in elderly"
+    ]
+  }
+}

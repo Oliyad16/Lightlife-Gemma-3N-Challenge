@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15T10:30:00Z",
+    "totalMappings": 25,
+    "source": "GS1 + Manufacturer Data",
+    "description": "Barcode to NDC number mappings for medication identification"
+  },
+  "mappings": [
+    {
+      "barcode": "309310790106",
+      "ndcNumber": "0093-1079-01",
+      "productName": "Metformin Hydrochloride Tablets, USP 500mg",
+      "manufacturer": "Teva Pharmaceuticals USA, Inc.",
+      "packageSize": "100 tablets",
+      "gtin": "00309310790106",
+      "verified": true,
+      "lastUpdated": "2024-01-15"
+    },
+    {
+      "barcode": "309350560190",
+      "ndcNumber": "0093-5056-01",
+      "productName": "Lisinopril Tablets, USP 10mg",
+      "manufacturer": "Teva Pharmaceuticals USA, Inc.",
+      "packageSize": "90 tablets",
+      "gtin": "00309350560190",
+      "verified": true,
+      "lastUpdated": "2024-01-15"
+    },
+    {
+      "barcode": "307773105028",
+      "ndcNumber": "0777-3105-02",
+      "productName": "Amlodipine Besylate Tablets 5mg",
+      "manufacturer": "Deva Holdings Inc.",
+      "packageSize": "30 tablets",
+      "gtin": "00307773105028",
+      "verified": true,
+      "lastUpdated": "2024-01-15"
+    },
+    {
+      "barcode": "368180518066",
+      "ndcNumber": "68180-518-06",
+      "productName": "Atorvastatin Calcium Tablets 20mg",
+      "manufacturer": "Lupin Pharmaceuticals, Inc.",
+      "packageSize": "30 tablets",
+      "gtin": "00368180518066",
+      "verified": true,
+      "lastUpdated": "2024-01-15"
+    },
+    {
+      "barcode": "303780781055",
+      "ndcNumber": "0378-0781-05",
+      "productName": "Omeprazole Delayed-Release Capsules 20mg",
+      "manufacturer": "Mylan Pharmaceuticals Inc.",
+      "packageSize": "30 capsules",
+      "gtin": "00303780781055",
+      "verified": true,
+      "lastUpdated": "2024-01-15"
+    },
+    {
+      "barcode": "301724983609",
+      "ndcNumber": "0172-4983-60",
+      "productName": "Levothyroxine Sodium Tablets 75mcg",
+      "manufacturer": "Amneal Pharmaceuticals LLC",
+      "packageSize": "90 tablets",
+      "gtin": "00301724983609",
+      "verified": true,
+      "lastUpdated": "2024-01-15"
+    },
+    {
+      "barcode": "123456789012",
+      "ndcNumber": "0093-1079-01",
+      "productName": "Metformin Hydrochloride Tablets, USP 500mg (Sample)",
+      "manufacturer": "Sample Manufacturer",
+      "packageSize": "30 tablets",
+      "gtin": "00123456789012",
+      "verified": false,
+      "lastUpdated": "2024-01-15",
+      "notes": "Demo barcode for testing purposes"
+    },
+    {
+      "barcode": "987654321098",
+      "ndcNumber": "0093-5056-01",
+      "productName": "Lisinopril Tablets, USP 10mg (Sample)",
+      "manufacturer": "Sample Manufacturer",
+      "packageSize": "30 tablets",
+      "gtin": "00987654321098",
+      "verified": false,
+      "lastUpdated": "2024-01-15",
+      "notes": "Demo barcode for testing purposes"
+    },
+    {
+      "barcode": "555666777888",
+      "ndcNumber": "0777-3105-02",
+      "productName": "Amlodipine Besylate Tablets 5mg (Sample)",
+      "manufacturer": "Sample Manufacturer",
+      "packageSize": "30 tablets",
+      "gtin": "00555666777888",
+      "verified": false,
+      "lastUpdated": "2024-01-15",
+      "notes": "Demo barcode for testing purposes"
+    },
+    {
+      "barcode": "111222333444",
+      "ndcNumber": "68180-518-06",
+      "productName": "Atorvastatin Calcium Tablets 20mg (Sample)",
+      "manufacturer": "Sample Manufacturer",
+      "packageSize": "30 tablets",
+      "gtin": "00111222333444",
+      "verified": false,
+      "lastUpdated": "2024-01-15",
+      "notes": "Demo barcode for testing purposes"
+    }
+  ],
+  "validationRules": {
+    "barcodeFormats": [
+      "UPC-A (12 digits)",
+      "EAN-13 (13 digits)",
+      "Code 128",
+      "Data Matrix"
+    ],
+    "checksumValidation": true,
+    "minimumLength": 8,
+    "maximumLength": 20
+  },
+  "usage": {
+    "scanningInstructions": [
+      "Hold device steady 6-8 inches from barcode",
+      "Ensure adequate lighting",
+      "Align barcode within scanning frame",
+      "Wait for automatic recognition"
+    ],
+    "troubleshooting": [
+      "Clean camera lens if scan fails",
+      "Try different angles if first attempt fails",
+      "Ensure barcode is not damaged or obscured",
+      "Use manual entry if barcode cannot be scanned"
+    ]
+  }
+}
