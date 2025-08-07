@@ -269,10 +269,8 @@ gpu_acceleration: true
 
 For questions about this submission or technical implementation details:
 
-- **GitHub Issues**: [Repository Issues Page]
-- **Technical Documentation**: See `/docs` directory
-- **Demo Video**: [Link to demo video]
-- **Live Demo**: [Deployment URL]
+- **Demo Video**: [Link to demo video](https://youtu.be/WzEtEV2jggk?si=0PM-4AE3dJxm2Yz3)
+
 
 ## 📄 License
 
