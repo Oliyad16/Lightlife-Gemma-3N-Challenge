@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Internal storage paths -->
+    <files-path name="files" path="." />
+    <cache-path name="cache" path="." />
+    
+    <!-- External storage paths for model files and exports -->
+    <external-files-path name="external_files" path="." />
+    <external-cache-path name="external_cache" path="." />
+    
+    <!-- Specific paths for AI models -->
+    <files-path name="models" path="models/" />
+    <cache-path name="model_cache" path="models/" />
+    
+    <!-- Paths for user data exports -->
+    <files-path name="exports" path="exports/" />
+    <external-files-path name="external_exports" path="exports/" />
+    
+    <!-- Paths for FDA database -->
+    <files-path name="fda_data" path="fda/" />
+    <cache-path name="fda_cache" path="fda/" />
+    
+    <!-- Paths for temporary files -->
+    <cache-path name="temp" path="temp/" />
+    <external-cache-path name="external_temp" path="temp/" />
+    
+    <!-- Paths for logs (debug builds) -->
+    <files-path name="logs" path="logs/" />
+</paths>

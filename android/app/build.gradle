@@ -1,0 +1,131 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdk 34
+    
+    defaultConfig {
+        applicationId "com.lifelight.medication.gemma3n"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0.0"
+        
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        
+        // Enable multidex for large app
+        multiDexEnabled true
+        
+        // ONNX Runtime requires these features
+        ndk {
+            abiFilters 'arm64-v8a', 'armeabi-v7a', 'x86_64', 'x86'
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            
+            // Keep debug symbols for AI model debugging
+            ndk {
+                debugSymbolLevel 'SYMBOL_TABLE'
+            }
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            
+            // Optimize for release
+            zipAlignEnabled true
+        }
+    }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    
+    // Enable view binding for modern Android development
+    buildFeatures {
+        viewBinding true
+    }
+    
+    // Packaging options for native libraries
+    packagingOptions {
+        pickFirst '**/libc++_shared.so'
+        pickFirst '**/libjsc.so'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    
+    // Configure lint options
+    lint {
+        abortOnError false
+        disable 'MissingTranslation'
+    }
+}
+
+repositories {
+    flatDir {
+        dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':capacitor-android')
+    implementation project(':capacitor-cordova-android-plugins')
+    
+    // AndroidX dependencies
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.activity:activity:1.8.2'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    
+    // Capacitor core
+    implementation "com.getcapacitor:core:6.0.0"
+    
+    // ONNX Runtime for AI inference
+    implementation 'com.microsoft.onnxruntime:onnxruntime-android:1.16.3'
+    
+    // JSON processing
+    implementation 'org.json:json:20231013'
+    
+    // Camera and barcode scanning
+    implementation 'com.google.zxing:core:3.5.2'
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+    
+    // HTTP client for FDA data updates
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    
+    // File I/O utilities
+    implementation 'commons-io:commons-io:2.11.0'
+    
+    // Local storage encryption
+    implementation 'androidx.security:security-crypto:1.1.0-alpha06'
+    
+    // Performance monitoring
+    implementation 'androidx.benchmark:benchmark-junit4:1.2.2'
+    
+    // Testing dependencies
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.mockito:mockito-core:5.7.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
+
+apply from: 'capacitor.build.gradle'
+
+try {
+    def servicesJSON = file('google-services.json')
+    if (servicesJSON.exists()) {
+        apply plugin: 'com.google.gms.google-services'
+    }
+} catch(Exception e) {
+    logger.info "google-services.json not found, google-services plugin not applied. Push Notifications won't work"
+}
